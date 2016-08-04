@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>ES6 - Constructor</title>
+</head>
+<body>
+<script>
+"use strict"
+
+var closureAlert = function(){
+  var x = "help, I am stuck in this function";
+  var alerter = function(){
+    alert(x);
+  }
+  setTimeout(alerter, 1000)
+  console.log("run this first");
+}
+
+closureAlert();
+
+
+
+</script>
+</body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>ES6 - Constructor</title>
+</head>
+<body>
+<script>
+"use strict"
+var parentFn = function(){
+  var x = 0
+  var childFn = function(){
+    x=x+1;
+    alert(x);
+  }
+  return childFn
+}
+var firstCall = parentFn();
+var secondCall = parentFn();
+
+//firstCall() -> alerts 1
+//firstCall() -> alerts 2
+//secondCall() -> alerts 1
+//*** Closures "remember" their parent's scope ***
+
+</script>
+</body>
+</html>

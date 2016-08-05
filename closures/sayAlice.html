@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>ES6 - Constructor</title>
+</head>
+<body>
+<script>
+"use strict"
+
+function sayPhrase(phrase){
+  function childFn(){
+    console.log(phrase);
+  }
+  return childFn;
+}
+
+var alice = sayPhrase("Hi, my name is Alice");
+var doug = sayPhrase("hi, my name is Doug");
+
+alice();
+doug();
+
+</script>
+</body>
+</html>

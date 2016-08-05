@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Stopwatch</title>
+</head>
+<body>
+<script>
+"use strict"
+
+function makeStopwatch(){
+  var elapsed = 0;
+  console.log('initialized', elapsed);
+
+  var stopwatch = function(){
+    console.log('stopwatch');
+    return elapsed;
+  }
+
+  var increase = function(){
+    elapsed++;
+    // console.log(elapsed);
+  }
+  setInterval(increase, 1000);
+  increase();
+
+  return stopwatch;
+}
+var stop1 = makeStopwatch()
+var stop2;
+stop1();
+
+setTimeout(function(){
+stop2 = makeStopwatch();
+stop2();
+}, 10000);
+
+
+
+</script>
+</body>
+</html>

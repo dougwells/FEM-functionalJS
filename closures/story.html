@@ -10,8 +10,9 @@
 
 var storyWriter = function(story){
   var storyMethods = {
-    addWord: function(newWord){story = story+newWord; return story},
-    erase: function(){story = ""; return story}
+    addWord: function(newWord){story = story+newWord; this.story=story; return story},
+    erase: function(){story = ""; this.story = ""; return story},
+
 }
   return storyMethods;
 }

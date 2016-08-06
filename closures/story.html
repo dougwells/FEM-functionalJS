@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>ES6 - Constructor</title>
+</head>
+<body>
+<script>
+"use strict"
+
+var storyWriter = function(story){
+  var storyMethods = {
+    addWord: function(newWord){story = story+newWord; return story},
+    erase: function(){story = ""; return story}
+}
+  return storyMethods;
+}
+
+// console.log(storyWriter("hello"));
+var toWhom = storyWriter("To whom the bell tolls");
+var twoCities = storyWriter("The tale of two cities");
+
+console.log(toWhom.addWord(' loudly'));
+console.log(twoCities.addWord('. It was the best of times.'))
+
+
+</script>
+</body>
+</html>

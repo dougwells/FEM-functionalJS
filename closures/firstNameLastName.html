@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>ES6 - Constructor</title>
+</head>
+<body>
+<script>
+"use strict"
+
+var firstName = function(first){
+  var second = function(second){
+    console.log("Your guest is", first, second)
+  }
+  return second;
+}
+
+var firstNameDoug = firstName("Doug");
+var FirstNameSavs = firstName("Savannah");
+
+firstNameDoug("Wells");
+FirstNameSavs("Delyne");
+
+</script>
+</body>
+</html>

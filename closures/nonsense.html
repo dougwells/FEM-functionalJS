@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>ES6 - Constructor</title>
+</head>
+<body>
+<script>
+"use strict"
+
+var nonsense = function(phrase){
+  var blab = function(){
+    alert(phrase);
+  }
+  return blab;
+}
+var blabFirst = nonsense("hello");
+var blabSecond = nonsense("goodbye");
+
+</script>
+</body>
+</html>

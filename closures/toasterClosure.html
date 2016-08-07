@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>ES6 - Constructor</title>
+</head>
+<body>
+<script>
+"use strict"
+
+function Toaster (){
+  var timeToBurnToast = 20;
+
+  return {
+    chooseFood: function(food){
+      this.food = food;
+      console.log("good choice. Toasted " + food + " coming up!");
+      return food;
+    },
+    chooseTime: function(time){
+      if(time<timeToBurnToast){
+        return "Light Brown"
+      }else {
+        return "Extra Toasted"
+      }
+    }
+  }
+}
+
+var toasty = new Toaster;
+toasty.chooseFood('bagel');
+console.log(toasty.chooseTime(11));
+console.log(toasty);
+
+</script>
+</body>
+</html>

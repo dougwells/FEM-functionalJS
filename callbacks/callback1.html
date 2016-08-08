@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>ES6 - Constructor</title>
+</head>
+<body>
+<script>
+"use strict"
+
+function funCaller (arg, fn){
+  return fn(arg);
+}
+
+function square(n){return n*n;}
+console.log(funCaller(5, square))
+
+</script>
+</body>
+</html>

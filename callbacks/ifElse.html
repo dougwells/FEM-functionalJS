@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>ES6 - Constructor</title>
+</head>
+<body>
+<script>
+"use strict"
+
+var ifElsy = function(condition, trueFn, falseFn){
+  if(condition){
+    return trueFn();
+  }else{
+    return falseFn();
+  }
+}
+
+var truthy = function (){return "True"}
+var falsey = function (){return "False"}
+
+console.log(ifElsy(true, truthy, falsey));
+
+
+</script>
+</body>
+</html>

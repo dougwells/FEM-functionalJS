@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>ES6 - Constructor</title>
+</head>
+<body>
+<script>
+"use strict"
+
+var doMath = function(num, fn){
+  return fn(num)
+}
+
+function square(n){return n*n;}
+function double(n){return 2*n;}
+
+console.log(doMath(5, square));
+console.log(doMath(5, double));
+console.log(square(5));
+
+</script>
+</body>
+</html>
